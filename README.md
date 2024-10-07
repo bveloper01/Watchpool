@@ -1,4 +1,4 @@
-<h1 align="center">WatchPool</h1>
+<h1 align="center">Watchpool</h1>
 <h2 align="center">This dynamic video streaming application leverages the youtube_player_flutter package for seamless playback and control. The app utilizes flutter_dotenv for secure environment variable management, timeago for user-friendly timestamp formatting, and http for efficient API communication. This robust combination enables smooth video browsing, playback, and channel exploration, while ensuring responsive performance and an intuitive interface. The app's state is managed efficiently, providing a seamless user experience. It showcases advanced Flutter development techniques, effective API integration, and engaging mobile design principles. The result is a high-quality, feature-rich platform that functions as a YouTube clone, offering users a familiar yet enhanced video streaming experience.</h2>
 <br>
 <h3 align="center">Demo video: https://www.loom.com/share/7ea5efe235f345659dc210e067ddc282?sid=1f5acbaa-7883-4758-944a-40fbe6bf76b0</h3>
