@@ -23,7 +23,7 @@ class VideoViewState extends State<VideoView> {
     _initChannel();
   }
 
-  _initChannel() async {
+  Future<void> _initChannel() async {
     Channel channel = await APIService.instance
         .fetchChannel(channelId:  dotenv.env['FAV_CHANNEL'] ?? '');
     setState(() {
@@ -31,7 +31,7 @@ class VideoViewState extends State<VideoView> {
     });
   }
 
-  _buildProfileInfo() {
+  Container _buildProfileInfo() {
     return Container(
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
@@ -84,7 +84,7 @@ class VideoViewState extends State<VideoView> {
     );
   }
 
-  _buildVideo(Video video) {
+  GestureDetector _buildVideo(Video video) {
     return GestureDetector(
         onTap: () =>Navigator.push(
   context,
@@ -169,7 +169,7 @@ class VideoViewState extends State<VideoView> {
             )));
   }
 
-  _loadMoreVideos() async {
+  Future<void> _loadMoreVideos() async {
     _isLoading = true;
     List<Video> moreVideos = await APIService.instance
         .fetchVideosFromPlaylist(playlistId: _channel!.uploadPlaylistId);

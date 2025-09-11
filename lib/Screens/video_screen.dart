@@ -57,7 +57,7 @@ class VideoScreenState extends State<VideoScreen> {
     }
   }
 
-  _loadMoreVideos() async {
+  Future<void> _loadMoreVideos() async {
     _isLoading = true;
     List<Video> moreVideos = await APIService.instance
         .fetchVideosFromPlaylist(playlistId: widget.channel!.uploadPlaylistId);
